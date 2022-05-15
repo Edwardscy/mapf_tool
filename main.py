@@ -3,6 +3,7 @@ import sys
 import os
 from PyQt5.QtWidgets import *
 
+from ui_layer.frame.main_frame import MainFrame
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -19,9 +20,14 @@ class MainWindow(QMainWindow):
         pass
 
     def init_UI(self):
-        self.setStyleSheet("background-color:black")
+        # self.setStyleSheet("background-color:black")
         # self.setFixedSize(1920, 1080)
         self.setFixedSize(640, 480)
+        self.setWindowTitle('mapf_tool')
+
+        self.main_frame = MainFrame()
+        self.setCentralWidget(self.main_frame)
+
 
 
 
