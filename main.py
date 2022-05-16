@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
     def init_UI(self):
         # self.setStyleSheet("background-color:black")
         # self.setFixedSize(1920, 1080)
-        self.setFixedSize(640, 480)
+        self.setFixedSize(960, 640)
         self.setWindowTitle('mapf_tool')
 
         self.main_frame = MainFrame()

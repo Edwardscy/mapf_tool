@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>960</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,18 +19,459 @@
   <property name="frameShadow">
    <enum>QFrame::Raised</enum>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>40</y>
-     <width>72</width>
-     <height>15</height>
+     <x>0</x>
+     <y>0</y>
+     <width>960</width>
+     <height>640</height>
     </rect>
    </property>
-   <property name="text">
-    <string>TextLabel</string>
+   <property name="styleSheet">
+    <string notr="true">background:#474747;</string>
    </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="load_map_file_bt">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>410</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>37</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+width:270px;
+height:42px;
+background:#3B5EAD;
+border-radius:4px;
+color:#e3e3e3;
+width: 168px;
+height: 48px;
+font-size:21px;
+font-weight:300;
+line-height:50px;
+letter-spacing:4px;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+QPushButton:hover {
+width:270px;
+height:42px;
+background:#474747;
+border-radius:4px;
+border:2px solid #666666;
+color:#e3e3e3;
+width: 168px;
+height: 48px;
+font-size:21px;
+font-weight:300;
+line-height:50px;
+letter-spacing:4px;
+background-position: center;
+background-repeat: no-repeat;
+}</string>
+    </property>
+    <property name="text">
+     <string>Load map file</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</normaloff>
+      <normalon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_active.png</normalon>
+      <activeoff>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</activeoff>
+      <activeon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_active.png</activeon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>270</width>
+      <height>42</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="generate_random_maps_bt">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>490</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>37</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+width:270px;
+height:42px;
+background:#3B5EAD;
+border-radius:4px;
+color:#e3e3e3;
+width: 168px;
+height: 48px;
+font-size:21px;
+font-weight:300;
+line-height:50px;
+letter-spacing:4px;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+QPushButton:hover {
+width:270px;
+height:42px;
+background:#474747;
+border-radius:4px;
+border:2px solid #666666;
+color:#e3e3e3;
+width: 168px;
+height: 48px;
+font-size:21px;
+font-weight:300;
+line-height:50px;
+letter-spacing:4px;
+background-position: center;
+background-repeat: no-repeat;
+}</string>
+    </property>
+    <property name="text">
+     <string>Generate random maps</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</normaloff>
+      <normalon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_active.png</normalon>
+      <activeoff>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</activeoff>
+      <activeon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_active.png</activeon>../../../mule_sdk/sample/brainer/BrainerUILayer/UI/picture/back_inactive.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>270</width>
+      <height>42</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="formtext_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:142px;
+height:64px;
+font-size:24px;
+color:rgba(213,213,213,1);
+line-height:32px;
+</string>
+    </property>
+    <property name="text">
+     <string>agents num:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:240px;
+font: 18pt;
+color: rgb(255, 255, 255);
+height:40px;
+background:rgba(51,51,51,1);
+border-radius:4px;
+border:1px solid rgba(102,102,102,1);
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="formtext_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:142px;
+height:64px;
+font-size:24px;
+color:rgba(213,213,213,1);
+line-height:32px;
+</string>
+    </property>
+    <property name="text">
+     <string>obstacles num:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>80</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:240px;
+font: 18pt;
+color: rgb(255, 255, 255);
+height:40px;
+background:rgba(51,51,51,1);
+border-radius:4px;
+border:1px solid rgba(102,102,102,1);
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="formtext_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:142px;
+height:64px;
+font-size:24px;
+color:rgba(213,213,213,1);
+line-height:32px;
+</string>
+    </property>
+    <property name="text">
+     <string>map width:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>150</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:240px;
+font: 18pt;
+color: rgb(255, 255, 255);
+height:40px;
+background:rgba(51,51,51,1);
+border-radius:4px;
+border:1px solid rgba(102,102,102,1);
+</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>210</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:240px;
+font: 18pt;
+color: rgb(255, 255, 255);
+height:40px;
+background:rgba(51,51,51,1);
+border-radius:4px;
+border:1px solid rgba(102,102,102,1);
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="formtext_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>210</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width:142px;
+height:64px;
+font-size:24px;
+color:rgba(213,213,213,1);
+line-height:32px;
+</string>
+    </property>
+    <property name="text">
+     <string>map height:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>570</y>
+      <width>271</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1636</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar::chunk {
+   background: rgb(91, 130, 189);
+   margin: 1px;
+   border-radius:20px;
+}
+QProgressBar{
+        color: white;
+        text-align: center;
+        background: rgb(68, 69, 73);
+}</string>
+    </property>
+    <property name="maximum">
+     <number>3</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="textDirection">
+     <enum>QProgressBar::TopToBottom</enum>
+    </property>
+    <property name="format">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_robot_control_txt">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>280</y>
+      <width>271</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:#474747;
+border:2px solid #333333;
+border-radius:4px;
+color:#D5D5D5;
+font:18px;
+padding:16px 16px 16px 16px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>611</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>99999</width>
+      <height>99999</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>10</width>
+      <height>10</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: -10px -10px -10px -10px;</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
