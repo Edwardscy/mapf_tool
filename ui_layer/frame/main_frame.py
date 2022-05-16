@@ -29,6 +29,20 @@ class MainFrame(QFrame):
 
 
     def init_connect(self):
+        self.load_map_file_bt.clicked.connect(self.slot_load_map_file_bt)
+        self.generate_random_maps_bt.clicked.connect(self.slot_generate_random_maps_bt)
+
+    def slot_load_map_file_bt(self):
+
+        files, ok1 = QFileDialog.getOpenFileNames(self,
+                                                  "choose multi files",
+                                                  "./",
+                                                  "All Files (*);;Text Files (*.txt)")
+        print(files, ok1)
+
+
+
+    def slot_generate_random_maps_bt(self):
         pass
 
 
